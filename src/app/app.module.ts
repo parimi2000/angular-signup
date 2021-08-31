@@ -10,8 +10,24 @@ import { RouterModule } from '@angular/router';
 
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule ],
-  declarations: [ AppComponent, TopBarComponent,ProductListComponent, ButtonComponent],
-  bootstrap:    [ AppComponent ]
+  imports:      
+  [ 
+    BrowserModule, 
+    FormsModule,
+    RouterModule.forRoot([
+      { path: '', component: ProductListComponent},
+    ])
+  ],
+  declarations: 
+  [ 
+    AppComponent, 
+    TopBarComponent,
+    ProductListComponent, 
+    ButtonComponent
+  ],
+  bootstrap:  
+  [ 
+    AppComponent 
+  ]
 })
 export class AppModule { }
